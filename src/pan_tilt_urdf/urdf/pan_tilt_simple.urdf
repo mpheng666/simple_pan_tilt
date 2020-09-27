@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name = "simple_pan_tilt">
+
+  <material name = "black">
+    <color rgba = "0 0 0 1"/>
+  </material>
+
+  <material name = "white">
+    <color rgba = "1 1 1 1"/>
+  </material>
+
+  <link name = "base_link">
+    <visual>
+      <geometry>
+        <box size = "0.078 0.047 0.078"/>
+      </geometry>
+      <material name = "white"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.078 0.047 0.078"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="top_servo_link">
+    <visual>
+      <geometry>
+        <box size = "0.033 0.05 0.065"/>
+      </geometry>
+      <origin rpy = "0 0 0" xyz="0.011 0.0 0.0725"/>
+      <material name = "black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.033 0.05 0.065"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name = "base_to_top_servo" type ="revolute">
+    <axis xyz = "0 0 1"/>
+    <limit effort = "1000.0" lower = "-1.57" upper = "1.57" velocity = "0.5"/>
+    <parent link = "base_link"/>
+    <child link = "top_servo_link"/>
+  </joint>
+
+  </robot>
