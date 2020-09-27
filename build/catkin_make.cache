@@ -1,0 +1,2 @@
+pan_tilt_urdf
+-DCATKIN_DEVEL_PREFIX=/home/lycoris/mech_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lycoris/mech_ws/install -G Unix Makefiles
