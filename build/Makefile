@@ -294,7 +294,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f pan_tilt_urdf/CMakeFiles/_catkin_empty_exported_target.dir/build.make pan_tilt_urdf/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f pan_tilt_config/CMakeFiles/_catkin_empty_exported_target.dir/build.make pan_tilt_config/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target

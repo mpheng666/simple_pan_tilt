@@ -1,0 +1,8 @@
+prefix=/home/lycoris/mech_ws/install
+
+Name: moveit_plugin
+Description: Description of moveit_plugin
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

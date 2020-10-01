@@ -1,0 +1,8 @@
+prefix=/home/lycoris/mech_ws/install
+
+Name: my_arm_xacro
+Description: Description of my_arm_xacro
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_core pluginlib roscpp tf_conversions

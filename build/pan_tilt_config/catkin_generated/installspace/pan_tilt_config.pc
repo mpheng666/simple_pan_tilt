@@ -1,0 +1,8 @@
+prefix=/home/lycoris/mech_ws/install
+
+Name: pan_tilt_config
+Description: Description of pan_tilt_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

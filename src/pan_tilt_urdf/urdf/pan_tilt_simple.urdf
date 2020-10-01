@@ -23,12 +23,12 @@
     </collision>
   </link>
 
-  <link name="top_servo_link">
+  <link name="top_pan_link">
     <visual>
       <geometry>
         <box size = "0.033 0.05 0.065"/>
       </geometry>
-      <origin rpy = "0 0 0" xyz="0.011 0.0 0.0725"/>
+      <origin rpy = "0 0 0" xyz="0 0 0"/>
       <material name = "black"/>
     </visual>
     <collision>
@@ -38,11 +38,35 @@
     </collision>
   </link>
 
-  <joint name = "base_to_top_servo" type ="revolute">
+  <joint name = "pan_joint" type ="revolute">
     <axis xyz = "0 0 1"/>
     <limit effort = "1000.0" lower = "-1.57" upper = "1.57" velocity = "0.5"/>
+    <origin rpy = "0 0 0" xyz="0.011 0.0 0.0725"/>
     <parent link = "base_link"/>
-    <child link = "top_servo_link"/>
+    <child link = "top_pan_link"/>
+  </joint>
+
+  <link name="top_tilt_link">
+    <visual>
+      <geometry>
+        <box size = "0.025 0.078 0.043"/>
+      </geometry>
+      <origin rpy = "0 0 0" xyz="0 0 0"/>
+      <material name = "white"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.025 0.078 0.043"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name = "tilt_joint" type ="revolute">
+    <axis xyz = "0 1 0"/>
+    <limit effort = "1000.0" lower = "-1.57" upper = "1.57" velocity = "0.5"/>
+    <origin rpy = "0 0 3.142" xyz="0 0 0.016"/>
+    <parent link = "top_pan_link"/>
+    <child link = "top_tilt_link"/>
   </joint>
 
   </robot>

@@ -1,0 +1,8 @@
+controller_list:
+  - name: fake_Metro_arm_controller
+    joints:
+      - pan_joint
+      - tilt_joint
+initial:  # Define initial robot poses.
+  - group: Metro_arm
+    pose: home

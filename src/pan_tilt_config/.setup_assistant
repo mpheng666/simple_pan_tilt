@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: pan_tilt_urdf
+    relative_path: urdf/pan_tilt_simple.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/simple_pan_tilt.srdf
+  CONFIG:
+    author_name: Heng Meng Pei
+    author_email: mpheng96@gmail.com
+    generated_timestamp: 1601254938
